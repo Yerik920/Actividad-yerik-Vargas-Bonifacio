@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22 - Propiedades CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .propiedad {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .ejemplo {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #007acc;
+        }
+        
+        .ejemplo-border-top {
+            border-top: 3px solid #ff6b6b;
+            padding: 10px;
+        }
+        
+        .ejemplo-border-bottom {
+            border-bottom: 5px dotted #4ecdc4;
+            padding: 10px;
+        }
+        
+        .ejemplo-margin {
+            background-color: #ffe66d;
+            margin: 20px 10px 30px 40px; 
+            padding: 10px;
+        }
+        
+        .ejemplo-padding {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 25px 15px 10px 35px; 
+        }
+        
+    
+        .ejemplo-vertical-align {
+            line-height: 50px;
+        }
+        
+        .ejemplo-vertical-align img {
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-color: #4ecdc4;
+            display: inline-block;
+        }
+        
+        .ejemplo-vertical-align .texto-superior {
+            vertical-align: top;
+            background-color: #ffe66d;
+            padding: 5px;
+        }
+        
+        .ejemplo-vertical-align .texto-inferior {
+            vertical-align: bottom;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px;
+        }
+        
+        .ejemplo-text-indent {
+            text-indent: 50px;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        
+        .ejemplo-text-wrap {
+            width: 200px;
+            background-color: #e8f4f8;
+            padding: 10px;
+            text-wrap: wrap; 
+            border: 1px solid #ccc;
+        }
+        
+        .ejemplo-text-nowrap {
+            width: 200px;
+            background-color: #ffeaa7;
+            padding: 10px;
+            white-space: nowrap; 
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+        
+        .ejemplo-text-stroke {
+            font-size: 36px;
+            font-weight: bold;
+            -webkit-text-stroke: 2px #ff6b6b;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        
+        .ejemplo-text-stroke-2 {
+            font-size: 24px;
+            font-weight: bold;
+            -webkit-text-stroke: 1px #333;
+            -webkit-text-fill-color: #ffe66d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 22 - Investigación de Propiedades CSS</h1>
+        
+        <div class="propiedad">
+            <h2>border-top:</h2>
+            <p><strong>Definición:</strong> Establece el borde superior de un elemento. Es una propiedad abreviada que combina border-top-width, border-top-style y border-top-color.</p>
+            <p><strong>Sintaxis:</strong> border-top: [ancho] [estilo] [color];</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-border-top">
+                    Este div tiene un borde superior de 3px sólido rojo.
+                </div>
+                <code>border-top: 3px solid #ff6b6b;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>border-bottom:</h2>
+            <p><strong>Definición:</strong> Establece el borde inferior de un elemento. Es una propiedad abreviada que combina border-bottom-width, border-bottom-style y border-bottom-color.</p>
+            <p><strong>Sintaxis:</strong> border-bottom: [ancho] [estilo] [color];</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-border-bottom">
+                    Este div tiene un borde inferior de 5px punteado azul verdoso.
+                </div>
+                <code>border-bottom: 5px dotted #4ecdc4;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>margin:</h2>
+            <p><strong>Definición:</strong> Establece el margen exterior de un elemento. Es el espacio entre el borde del elemento y los elementos adyacentes.</p>
+            <p><strong>Sintaxis:</strong> margin: [top] [right] [bottom] [left]; o margin: [valor]; para todos los lados</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-margin">
+                    Este div tiene márgenes diferentes: 20px arriba, 10px derecha, 30px abajo, 40px izquierda.
+                </div>
+                <code>margin: 20px 10px 30px 40px;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>padding:</h2>
+            <p><strong>Definición:</strong> Establece el relleno interior de un elemento. Es el espacio entre el contenido y el borde del elemento.</p>
+            <p><strong>Sintaxis:</strong> padding: [top] [right] [bottom] [left]; o padding: [valor]; para todos los lados</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-padding">
+                    Este div tiene padding diferente: 25px arriba, 15px derecha, 10px abajo, 35px izquierda.
+                </div>
+                <code>padding: 25px 15px 10px 35px;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>vertical-align:</h2>
+            <p><strong>Definición:</strong> Establece la alineación vertical de un elemento en línea o celda de tabla respecto a la línea base.</p>
+            <p><strong>Valores comunes:</strong> baseline, top, middle, bottom, text-top, text-bottom</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-vertical-align">
+                    Texto normal <span class="texto-superior">texto superior</span> 
+                    <span style="display: inline-block; width: 30px; height: 30px; background-color: #4ecdc4; vertical-align: middle;"></span>
+                    <span class="texto-inferior">texto inferior</span>
+                </div>
+                <code>vertical-align: top; vertical-align: middle; vertical-align: bottom;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>text-indent:</h2>
+            <p><strong>Definición:</strong> Establece la sangría de la primera línea de un bloque de texto.</p>
+            <p><strong>Sintaxis:</strong> text-indent: [valor en px, em, %, etc.];</p>
+            <div class="ejemplo">
+                <h3>Ejemplo:</h3>
+                <div class="ejemplo-text-indent">
+                    Este párrafo tiene una sangría de 50px en la primera línea. Como puedes ver, solo la primera línea está indentada, mientras que las líneas siguientes mantienen su alineación normal.
+                </div>
+                <code>text-indent: 50px;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>text-wrap:</h2>
+            <p><strong>Definición:</strong> Controla cómo se ajusta el texto dentro de un elemento. Determina si el texto debe ajustarse a nuevas líneas.</p>
+            <p><strong>Valores:</strong> wrap (por defecto), nowrap, balance</p>
+            <div class="ejemplo">
+                <h3>Ejemplo con wrap (normal):</h3>
+                <div class="ejemplo-text-wrap">
+                    Este texto se ajusta normalmente cuando alcanza el borde del contenedor y continúa en la siguiente línea.
+                </div>
+                <code>text-wrap: wrap;</code>
+                
+                <h3>Ejemplo con nowrap:</h3>
+                <div class="ejemplo-text-nowrap">
+                    Este texto no se ajusta y se corta cuando alcanza el borde del contenedor.
+                </div>
+                <code>white-space: nowrap;</code>
+            </div>
+        </div>
+        
+        <div class="propiedad">
+            <h2>text-stroke:</h2>
+            <p><strong>Definición:</strong> Añade un contorno al texto (principalmente soportado con prefijo -webkit-). Permite crear efectos de texto con borde.</p>
+            <p><strong>Sintaxis:</strong> -webkit-text-stroke: [ancho] [color];</p>
+            <div class="ejemplo">
+                <h3>Ejemplo 1 - Texto transparente con borde:</h3>
+                <div class="ejemplo-text-stroke">
+                    TEXTO CON BORDE
+                </div>
+                <code>-webkit-text-stroke: 2px #ff6b6b;<br>-webkit-text-fill-color: transparent;</code>
+                
+                <h3>Ejemplo 2 - Texto con relleno y borde:</h3>
+                <div class="ejemplo-text-stroke-2">
+                    Texto con borde y relleno
+                </div>
+                <code>-webkit-text-stroke: 1px #333;<br>-webkit-text-fill-color: #ffe66d;</code>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 20px; background-color: #e8f4f8; border-radius: 8px;">
+            <h3>Notas importantes:</h3>
+            <ul>
+                <li><strong>border-top</strong> y <strong>border-bottom</strong> son propiedades abreviadas muy útiles para estilizar bordes específicos.</li>
+                <li><strong>margin</strong> y <strong>padding</strong> son fundamentales para el espaciado y layout de elementos.</li>
+                <li><strong>vertical-align</strong> solo funciona en elementos en línea y celdas de tabla.</li>
+                <li><strong>text-indent</strong> es útil para dar formato a párrafos, especialmente en textos largos.</li>
+                <li><strong>text-wrap</strong> es una propiedad relativamente nueva, usar <code>white-space</code> para mayor compatibilidad.</li>
+                <li><strong>text-stroke</strong> requiere prefijo -webkit- y tiene limitado soporte en navegadores.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
